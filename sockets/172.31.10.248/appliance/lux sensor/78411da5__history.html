@@ -1,0 +1,2232 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+* AerWebCopy Engine [version 6.3.0]
+* Copyright Aeroson Systems & Co.
+* File mirrored from http://172.31.10.248:8181/appliance/lux sensor/history
+* At UTC time: 2021-12-26 19:17:12.837442
+
+--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../../static/ff229d15__icon_128x128_blu.png">
+    <link rel="stylesheet" href="../../../cdn.jsdelivr.net/npm/bulma%400.9.1/css/dff7d2a4__bulma.min.css">
+
+    <title>lux sensor history</title>
+
+    <script type="text/javascript" src="../../../ajax.googleapis.com/ajax/libs/jquery/1/0a8ce0df__jquery.min.js"></script>
+    <script src="../../../kit.fontawesome.com/f5f88875__dcf90dd78d.js"></script>
+    <script type="text/javascript" src="../../static/491a79db__homino.js"></script>
+</head>
+
+<body>
+<section class="section">
+    <div class="container">
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="../../static/ff229d15__icon_128x128_blu.png" width="32" height="32">
+        </a>
+
+        <a role="button" id="burger-button" onclick='$("#burger-button").toggleClass("is-active");$("#home-navbar").toggleClass("is-active")' class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="home-navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="home-navbar" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="../../348af68d__index.html">
+            <span class="icon has-text-info">
+                <i class="fas fa-home"></i>
+            </span>
+                <span>Home</span>
+            </a>
+            <a class="navbar-item" href="../../8d6a44c2__collections.html">
+                <span class="icon has-text-info">
+                <i class="fas fa-list"></i>
+            </span>
+                <span>Collections</span>
+            </a>
+            
+            <!--a class="navbar-item" href="/editor">
+                <span class="icon has-text-info">
+                <i class="fas fa-edit"></i>
+            </span>
+                <span>Configurator</span>
+            </a-->
+            <a class="navbar-item" href="../../941321a5__logs.html">
+                <span class="icon has-text-info">
+                <i class="far fa-clipboard"></i>
+            </span>
+                <span>Logs</span>
+            </a>
+            
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                
+                <div class="buttons">
+                    <label class="label is-info mr-3">admin</label>
+                    <form action="../../55f9c24e__logout.html" method="post">
+                        <input class="button is-light" type="submit" value="Logout">
+                    </form>
+                </div>
+                
+                <div class="modal" id="modal-login">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Login</p>
+            <button onclick='$("#modal-login").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <form action="../../30e1b0e2__login.html" method="post">
+                <label for="username">Username</label>
+                <input class="input is-info" type="text" name="username" id="username" value="">
+                <label for="password">Password</label>
+                <input class="input is-info" type="password" name="password" id="password" value="">
+                <input class="button is-info mt-6" type="submit" value="Login">
+            </form>
+        </section>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+        <nav class="breadcrumb mt-6" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="../../8d6a44c2__collections.html">Collections</a></li>
+                <li><a href="../../collection/37e81ea9__Sensors.html">Sensors</a></li>
+                <li><a href="../6476246d__lux%20sensor.html">lux sensor</a></li>
+                <li class="is-active"><a>history</a></li>
+            </ul>
+        </nav>
+
+        <h1 class="title">lux sensor</h1>
+
+        <div class="tile is-ancestor is-vertical mt-6">
+            <form class="tile is-parent box" action="./78411da5__history.html" method="POST" id="form-update-history">
+                <div class="tile is-child is-small">
+                    <label class="has-text-info is-small">Number of events: </label>
+                </div>
+                <div class="tile is-child is-small">
+                    <input class="input is-info is-small" type="number" name="num-of-events" id="num-of-events" value="10">
+                </div>
+                <div class="tile is-child is-small">
+                    <input class="button is-info is-small" type="submit" value="update">
+                </div>
+            </form>
+
+
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 17:14:30 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">0.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 17:04:30 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:59:30 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:54:30 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">5.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:53:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">6.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:52:13 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">10.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:50:04 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">14.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:49:09 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">18.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:47:48 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">22.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:47:19 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">26.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:46:18 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">30.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:45:56 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">34.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:45:03 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">39.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:44:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">44.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:44:07 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">47.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:43:34 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">53.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:42:43 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">60.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:41:24 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">68.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:40:17 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">77.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:39:30 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">87.04 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:39:10 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">91.04 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:38:28 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">102.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:37:32 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">115.04 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:36:09 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">130.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:34:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">146.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:33:12 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">159.04 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:31:29 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">178.08 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:29:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">199.04 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:29:29 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">196.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:27:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">219.04 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:25:49 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">244.96 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:24:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">272.96 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:23:35 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">291.04 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:22:28 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">324.96 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:21:25 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">364.16 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:20:25 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">406.08 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:19:32 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">453.12 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:19:19 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">460.16 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:18:21 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">512.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:17:13 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">575.04 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:15:55 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">640.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:14:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">712.96 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:13:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">757.12 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:12:01 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">842.88 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:10:42 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">938.88 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:09:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1043.84 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:08:06 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1107.84 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:06:02 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1232.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:04:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1370.88 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:03:46 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1447.68 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:02:27 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1610.24 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:01:30 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1794.56 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:00:00 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2000.64 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:59:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2236.16 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:59:14 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2132.48 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:57:05 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2370.56 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:56:19 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2146.56 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:55:37 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1932.8 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:54:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1747.2 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:53:16 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1733.1200000000001 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:53:09 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1568.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:51:42 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1745.92 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:51:36 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1568.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:51:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1779.2 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:51:05 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1612.8 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:50:15 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1806.08 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:50:12 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1617.92 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:49:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1816.32 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:44:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1858.56 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:41:46 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">1829.1200000000001 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:39:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2039.04 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:37:28 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2072.32 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:35:04 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2304.0 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:35:03 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2585.6 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:34:48 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2329.6 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:34:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2621.44 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:34:29 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2342.4 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:29:31 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2685.44 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:28:35 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">2705.92 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:26:02 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">3031.04 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:24:32 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">3374.08 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:23:14 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">3404.8 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:20:25 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">3791.36 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:19:32 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">4321.28 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:19:16 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">4410.88 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:18:16 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">4912.64 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:17:40 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">5468.16 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:16:26 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">6123.52 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:14:32 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">6865.92 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:12:41 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">7121.92 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:09:32 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">7915.52 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:08:10 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">8555.52 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:07:46 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">9548.800000000001 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:07:27 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">10700.800000000001 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:05:47 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">11939.84 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:05:20 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">13291.52 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:05:05 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">14817.28 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:04:54 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">16568.32 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:04:42 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">18565.12 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 15:04:32 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="lux-sensor-icon" class="None"></i>
+                            </span>
+                            <label id="lux-sensor-label">20654.08 lux</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+
+        </div>
+    </div>
+</section>
+</body>
+</html>

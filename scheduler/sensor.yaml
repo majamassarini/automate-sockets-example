@@ -1,0 +1,5 @@
+# A Christmas socket is the only one interested in lux changes
+- !schedule
+  trigger: "lux sensor scheduler trigger"
+  for performers: "a presence Christmas socket command"
+

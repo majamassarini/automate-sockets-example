@@ -1,0 +1,63 @@
+- !protocol.Trigger
+  name: "power sensor scheduler trigger"
+  notify more events: []
+  when triggered performers: "power sensor triggers"
+
+- !protocol.Trigger
+  name: "enable detach logic"
+  notify more events:
+    - !home.event.enable.Event.On
+  when triggered performers: "high power consumption trigger"
+
+- !protocol.delay.Trigger
+  name: "high power consumption for 92 minutes"
+  notify more events:
+    - !home.event.power.consumption.duration.Event.Long
+  when triggered performers: "high power consumption trigger"
+  and timeout expires: 5520
+
+- !protocol.delay.Trigger
+  name: "very high power consumption for 1 minute"
+  notify more events:
+    - !home.event.power.consumption.duration.Event.Long
+  when triggered performers: "very high power consumption trigger"
+  and timeout expires: 60
+
+- !protocol.delay.Trigger
+  name: "no more power consumption"
+  notify more events:
+    - !home.event.power.consumption.duration.Event.Short
+  when triggered performers: "no/low power consumption triggers"
+  and timeout expires: 60
+
+
+
+- !protocol.delay.Trigger
+  name: "scheduler trigger enable (sent by washing machine)"
+  notify more events: []
+  when triggered performers: "trigger enable (sent by washing machine)"
+  and timeout expires: 120
+
+- !protocol.delay.Trigger
+  name: "scheduler trigger enable (sent by dishwasher)"
+  notify more events: []
+  when triggered performers: "trigger enable (sent by dishwasher)"
+  and timeout expires: 120
+
+- !protocol.delay.Trigger
+  name: "scheduler trigger enable (sent by microwave)"
+  notify more events: []
+  when triggered performers: "trigger enable (sent by microwave)"
+  and timeout expires: 120
+
+- !protocol.delay.Trigger
+  name: "scheduler trigger enable (sent by oven)"
+  notify more events: []
+  when triggered performers: "trigger enable (sent by oven)"
+  and timeout expires: 120
+
+- !protocol.delay.Trigger
+  name: "scheduler trigger enable (sent by blast chiller)"
+  notify more events: []
+  when triggered performers: "trigger enable (sent by blast chiller)"
+  and timeout expires: 120

@@ -1,0 +1,47 @@
+- !schedule
+  trigger: "send Christmas event"
+  for performers: "a presence Christmas socket command"
+
+- !schedule
+  trigger: "send Christmas eve event"
+  for performers: "a presence Christmas socket command"
+
+- !schedule
+  trigger: "send Christmas time event (1)"
+  for performers: "a presence Christmas socket command"
+
+- !schedule
+  trigger: "send Christmas time event (2)"
+  for performers: "a presence Christmas socket command"
+
+- !schedule
+  trigger: "send Christmas time event (3)"
+  for performers: "a presence Christmas socket command"
+
+- !schedule
+  trigger: "send Christmas time is over event"
+  for performers: "a presence Christmas socket command"
+
+- !schedule
+  trigger: "send San Silvester event"
+  for performers: "a presence Christmas socket command"
+
+- !schedule
+  trigger: "send San Silvester eve event"
+  for performers: "a presence Christmas socket command"
+
+- !schedule
+  trigger: "send San Silvester is over event"
+  for performers: "a presence Christmas socket command"
+
+- !schedule
+  trigger: "send Epiphany event"
+  for performers: "a presence Christmas socket command"
+
+- !schedule
+  trigger: "send Epiphany eve event"
+  for performers: "a presence Christmas socket command"
+
+- !schedule
+  trigger: "send Epiphany is over event"
+  for performers: "a presence Christmas socket command"

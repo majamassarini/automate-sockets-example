@@ -1,0 +1,38 @@
+- !schedule
+  trigger: "power sensor scheduler trigger"
+  for performers: "energy guard sockets"
+
+- !schedule
+  trigger: "high power consumption for 92 minutes"
+  for performers: "energy guard sockets"
+
+- !schedule
+  trigger: "very high power consumption for 1 minute"
+  for performers: "energy guard sockets"
+
+- !schedule
+  trigger: "no more power consumption"
+  for performers: "energy guard sockets"
+
+- !schedule
+  trigger: "enable detach logic"
+  for performers: "washing machine command" # the lowest priority load
+
+
+# (turning off chain) washing machine -> dishwasher -> microwave -> oven -> blast chiller
+
+- !schedule
+  trigger: "scheduler trigger enable (sent by washing machine)"
+  for performers: "dishwasher command"
+
+- !schedule
+  trigger: "scheduler trigger enable (sent by dishwasher)"
+  for performers: "microwave command"
+
+- !schedule
+  trigger: "scheduler trigger enable (sent by microwave)"
+  for performers: "oven command"
+
+- !schedule
+  trigger: "scheduler trigger enable (sent by oven)"
+  for performers: "blast chiller command"

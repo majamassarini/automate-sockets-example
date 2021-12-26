@@ -1,0 +1,8 @@
+# If alarm is armed -> no one should be using sockets -> send a presence off event that will turn off them (if the case)
+
+- !schedule
+  trigger: "no one at home"
+  for performers: "presence sockets"
+- !schedule
+  trigger: "someone at home"
+  for performers: "presence sockets"

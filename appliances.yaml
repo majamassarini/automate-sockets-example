@@ -1,0 +1,17 @@
+!Appliances
+Sensors:
+  - !sensor.alarm.Appliance {name: "home alarm zone", events: []}
+  - !sensor.luxmeter.Appliance {name: "lux sensor", events: []}
+  - !sensor.powermeter.Appliance { name: "power sensor", events: [ ] }
+Presence sockets:
+  - !socket.presence.Appliance {name: "a presence socket", events: []}
+  - !socket.presence.christmas.Appliance  {name: "a presence Christmas socket", events: []}
+Energy guard sockets:
+  - !socket.energy_guard.Appliance
+    name: "washing machine"
+    events:
+      - !home.event.enable.Event.On # the lowest priority socket
+  - !socket.energy_guard.Appliance { name: "microwave", events: [ ] }
+  - !socket.energy_guard.Appliance { name: "oven", events: [ ] }
+  - !socket.energy_guard.Appliance { name: "dishwasher", events: [ ] }
+  - !socket.energy_guard.Appliance { name: "blast chiller", events: [ ] }

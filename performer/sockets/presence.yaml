@@ -1,0 +1,33 @@
+- !Performer
+  name: "a presence socket trigger"
+  for appliance: "a presence socket"
+  commands: []
+  triggers:
+  - !knx_plugin.trigger.dpt_switch.On
+    addresses: [0x0F81, 0x0F41, ]
+    events:
+      - !home.appliance.socket.event.forced.Event.On
+  - !knx_plugin.trigger.dpt_switch.Off
+    addresses: [0x0F81, 0x0F41, ]
+    events:
+      - !home.appliance.socket.event.forced.Event.Off
+
+- !Performer
+  name: "a presence socket command"
+  for appliance: "a presence socket"
+  commands:
+  - !knx_plugin.command.dpt_switch.OnOff {addresses: [0x0F81,]}
+  triggers: []
+
+# Turn on socket also with a scene button
+- !Performer
+  name: "watch tv"
+  for appliance: "a presence socket"
+  commands:
+    - !knx_plugin.command.dpt_switch.OnOff {addresses: [0x0F81,]}
+  triggers:
+    - !knx_plugin.trigger.dpt_scene_control.Activate
+      addresses: [ 0x0B05 ]
+      number: 5
+      events:
+        - !home.appliance.socket.event.forced.Event.On

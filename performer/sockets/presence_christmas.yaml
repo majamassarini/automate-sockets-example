@@ -1,0 +1,20 @@
+- !Performer
+  name: "a presence Christmas socket trigger"
+  for appliance: "a presence Christmas socket"
+  commands: []
+  triggers:
+  - !knx_plugin.trigger.dpt_switch.On
+    addresses: [0x0E01,]
+    events:
+      - !home.appliance.socket.event.forced.Event.On
+  - !knx_plugin.trigger.dpt_switch.Off
+    addresses: [0x0E01,]
+    events:
+      - !home.appliance.socket.event.forced.Event.Off
+
+- !Performer
+  name: "a presence Christmas socket command"
+  for appliance: "a presence Christmas socket"
+  commands:
+  - !knx_plugin.command.dpt_switch.OnOff {addresses: [0x0E01,]}
+  triggers: []

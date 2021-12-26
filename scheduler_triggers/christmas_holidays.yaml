@@ -1,0 +1,95 @@
+- !cron.Trigger
+  name: "send Christmas event"
+  notify events:
+  - !home.event.holiday.christmas.Event.Day
+  month: 12
+  day: 25
+  hour: 0
+
+- !cron.Trigger
+  name: "send Christmas eve event"
+  notify events:
+  - !home.event.holiday.christmas.Event.Eve
+  month: 12
+  day: 24
+  hour: 0
+
+- !cron.Trigger
+  name: "send Christmas time event (1)"
+  notify events:
+  - !home.event.holiday.christmas.Event.Time
+  month: 12
+  day: "1-23"
+  hour: 0
+
+- !cron.Trigger
+  name: "send Christmas time event (2)"
+  notify events:
+    - !home.event.holiday.christmas.Event.Time
+  month: 12
+  day: "26-31"
+  hour: 0
+
+- !cron.Trigger
+  name: "send Christmas time event (3)"
+  notify events:
+    - !home.event.holiday.christmas.Event.Time
+  month: 1
+  day: "1-6"
+  hour: 0
+
+- !cron.Trigger
+  name: "send Christmas time is over event"
+  notify events:
+  - !home.event.holiday.christmas.Event.Over
+  month: 1
+  day: 7
+  hour: 0
+
+- !cron.Trigger
+  name: "send San Silvester event"
+  notify events:
+  - !home.event.holiday.san_silvester.Event.Day
+  month: 1
+  day: 1
+  hour: 0
+
+- !cron.Trigger
+  name: "send San Silvester eve event"
+  notify events:
+  - !home.event.holiday.san_silvester.Event.Eve
+  month: 12
+  day: 31
+  hour: 0
+
+- !cron.Trigger
+  name: "send San Silvester is over event"
+  notify events:
+  - !home.event.holiday.san_silvester.Event.Over
+  month: 1
+  day: 2
+  hour: 0
+
+- !cron.Trigger
+  name: "send Epiphany event"
+  notify events:
+  - !home.event.holiday.epiphany.Event.Day
+  month: 1
+  day: 6
+  hour: 0
+
+- !cron.Trigger
+  name: "send Epiphany eve event"
+  notify events:
+  - !home.event.holiday.epiphany.Event.Eve
+  month: 1
+  day: 5
+  hour: 0
+
+- !cron.Trigger
+  name: "send Epiphany is over event"
+  notify events:
+  - !home.event.holiday.epiphany.Event.Over
+  month: 1
+  day: 7
+  hour: 0

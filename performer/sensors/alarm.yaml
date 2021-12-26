@@ -1,0 +1,33 @@
+- !Performer
+  name: "home alarm trigger armed on"
+  for appliance: "home alarm zone"
+  commands: [ ]
+  triggers:
+    - !knx_plugin.trigger.dpt_switch.On
+      addresses: [ 0xA1C, ]
+      events:
+        - !home.event.alarm.armed.Event.On
+
+- !Performer
+  name: "home alarm trigger armed off"
+  for appliance: "home alarm zone"
+  commands: [ ]
+  triggers:
+    - !knx_plugin.trigger.dpt_switch.Off
+      addresses: [ 0xA1C, ]
+      events:
+        - !home.event.alarm.armed.Event.Off
+
+- !Performer
+  name: "home alarm trigger presence"
+  for appliance: "home alarm zone"
+  commands: [ ]
+  triggers:
+    - !knx_plugin.trigger.dpt_switch.On
+      addresses: [ 0xA15, ]
+      events:
+        - !home.event.presence.Event.On
+    - !knx_plugin.trigger.dpt_switch.Off
+      addresses: [ 0xA15, ]
+      events:
+        - !home.event.presence.Event.Off

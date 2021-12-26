@@ -1,0 +1,33 @@
+- !Performer
+  name: "power sensor triggers"
+  for appliance: "power sensor"
+  commands: []
+  triggers:
+  - !knx_plugin.trigger.dpt_value_power.Always {addresses: [0x210F,]}
+  - !knx_plugin.trigger.dpt_value_power.consumption.No {addresses: [0x210F,]}
+  - !knx_plugin.trigger.dpt_value_power.consumption.Low {addresses: [0x210F,]}
+  - !knx_plugin.trigger.dpt_value_power.consumption.High {addresses: [0x210F,]}
+  - !knx_plugin.trigger.dpt_value_power.consumption.Overhead {addresses: [0x210F,]}
+  - !knx_plugin.trigger.dpt_value_power.production.No {addresses: [0x210F,]}
+
+- !Performer
+  name: "no/low power consumption triggers"
+  for appliance: "power sensor"
+  commands: []
+  triggers:
+    - !knx_plugin.trigger.dpt_value_power.consumption.Low {addresses: [0x210F,]}
+    - !knx_plugin.trigger.dpt_value_power.consumption.No {addresses: [0x210F,]}
+
+- !Performer
+  name: "high power consumption trigger"
+  for appliance: "power sensor"
+  commands: []
+  triggers:
+    - !knx_plugin.trigger.dpt_value_power.consumption.High {addresses: [0x210F,]}
+
+- !Performer
+  name: "very high power consumption trigger"
+  for appliance: "power sensor"
+  commands: []
+  triggers:
+    - !knx_plugin.trigger.dpt_value_power.consumption.Overhead {addresses: [0x210F,]}

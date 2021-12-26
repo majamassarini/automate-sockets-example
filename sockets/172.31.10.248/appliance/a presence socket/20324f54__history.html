@@ -1,0 +1,2925 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+* AerWebCopy Engine [version 6.3.0]
+* Copyright Aeroson Systems & Co.
+* File mirrored from http://172.31.10.248:8181/appliance/a presence socket/history
+* At UTC time: 2021-12-26 19:17:13.189581
+
+--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../../static/ff229d15__icon_128x128_blu.png">
+    <link rel="stylesheet" href="../../../cdn.jsdelivr.net/npm/bulma%400.9.1/css/dff7d2a4__bulma.min.css">
+
+    <title>a presence socket history</title>
+
+    <script type="text/javascript" src="../../../ajax.googleapis.com/ajax/libs/jquery/1/0a8ce0df__jquery.min.js"></script>
+    <script src="../../../kit.fontawesome.com/f5f88875__dcf90dd78d.js"></script>
+    <script type="text/javascript" src="../../static/491a79db__homino.js"></script>
+</head>
+
+<body>
+<section class="section">
+    <div class="container">
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="../../static/ff229d15__icon_128x128_blu.png" width="32" height="32">
+        </a>
+
+        <a role="button" id="burger-button" onclick='$("#burger-button").toggleClass("is-active");$("#home-navbar").toggleClass("is-active")' class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="home-navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="home-navbar" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="../../348af68d__index.html">
+            <span class="icon has-text-info">
+                <i class="fas fa-home"></i>
+            </span>
+                <span>Home</span>
+            </a>
+            <a class="navbar-item" href="../../8d6a44c2__collections.html">
+                <span class="icon has-text-info">
+                <i class="fas fa-list"></i>
+            </span>
+                <span>Collections</span>
+            </a>
+            
+            <!--a class="navbar-item" href="/editor">
+                <span class="icon has-text-info">
+                <i class="fas fa-edit"></i>
+            </span>
+                <span>Configurator</span>
+            </a-->
+            <a class="navbar-item" href="../../941321a5__logs.html">
+                <span class="icon has-text-info">
+                <i class="far fa-clipboard"></i>
+            </span>
+                <span>Logs</span>
+            </a>
+            
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                
+                <div class="buttons">
+                    <label class="label is-info mr-3">admin</label>
+                    <form action="../../55f9c24e__logout.html" method="post">
+                        <input class="button is-light" type="submit" value="Logout">
+                    </form>
+                </div>
+                
+                <div class="modal" id="modal-login">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Login</p>
+            <button onclick='$("#modal-login").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <form action="../../30e1b0e2__login.html" method="post">
+                <label for="username">Username</label>
+                <input class="input is-info" type="text" name="username" id="username" value="">
+                <label for="password">Password</label>
+                <input class="input is-info" type="password" name="password" id="password" value="">
+                <input class="button is-info mt-6" type="submit" value="Login">
+            </form>
+        </section>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+        <nav class="breadcrumb mt-6" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="../../8d6a44c2__collections.html">Collections</a></li>
+                <li><a href="../../collection/b6ec18ff__Presence%20sockets.html">Presence sockets</a></li>
+                <li><a href="../5b4e4146__a%20presence%20socket.html">a presence socket</a></li>
+                <li class="is-active"><a>history</a></li>
+            </ul>
+        </nav>
+
+        <h1 class="title">a presence socket</h1>
+
+        <div class="tile is-ancestor is-vertical mt-6">
+            <form class="tile is-parent box" action="./20324f54__history.html" method="POST" id="form-update-history">
+                <div class="tile is-child is-small">
+                    <label class="has-text-info is-small">Number of events: </label>
+                </div>
+                <div class="tile is-child is-small">
+                    <input class="input is-info is-small" type="number" name="num-of-events" id="num-of-events" value="10">
+                </div>
+                <div class="tile is-child is-small">
+                    <input class="button is-info is-small" type="submit" value="update">
+                </div>
+            </form>
+
+
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:44:11 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 16:13:13 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 26 07:08:08 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 25 23:29:56 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 25 23:04:00 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 25 20:47:16 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 25 20:47:15 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 25 16:24:38 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 25 08:01:21 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 24 22:50:52 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 24 22:45:12 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 24 22:41:44 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 24 20:51:15 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 24 19:53:40 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 24 19:48:15 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 24 15:37:35 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 24 05:43:44 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 23 23:54:45 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 23 23:11:19 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 23 19:13:59 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 23 18:23:26 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 23 16:33:50 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 23 12:43:39 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 23 12:12:41 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 23 12:06:30 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 23 08:20:02 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 23 06:52:54 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 22:53:59 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 22:51:47 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 19:57:38 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 19:57:37 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 18:17:49 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 17:54:12 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 16:15:22 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 16:14:28 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 16:13:19 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 15:48:06 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 15:17:47 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 08:42:03 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 08:28:08 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 06:40:06 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Wed Dec 22 00:27:45 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Tue Dec 21 21:05:42 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Tue Dec 21 20:26:54 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Tue Dec 21 20:23:32 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Tue Dec 21 19:01:08 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Tue Dec 21 18:35:07 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Tue Dec 21 16:38:08 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Tue Dec 21 16:34:04 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Tue Dec 21 12:52:40 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Tue Dec 21 06:56:49 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Tue Dec 21 00:35:06 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Tue Dec 21 00:07:43 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Mon Dec 20 22:30:44 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Mon Dec 20 22:30:42 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Mon Dec 20 20:23:35 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Mon Dec 20 20:21:34 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Mon Dec 20 17:38:20 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Mon Dec 20 17:35:54 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Mon Dec 20 17:01:50 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Mon Dec 20 13:23:41 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Mon Dec 20 08:26:24 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Mon Dec 20 07:08:25 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 19 23:36:43 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 19 23:09:14 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 19 17:44:51 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 19 17:40:49 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 19 17:19:18 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 19 17:15:03 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 19 15:30:35 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 19 08:43:05 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 19 08:40:56 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sun Dec 19 07:22:28 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 18 23:01:19 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 18 22:46:07 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 18 17:10:41 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 18 13:04:43 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 18 13:04:42 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 18 09:30:11 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 18 08:47:14 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Sat Dec 18 06:36:03 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 17 23:45:37 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 17 23:19:16 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 17 21:15:20 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 17 17:38:24 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 17 16:44:19 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 17 16:41:13 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 17 16:41:11 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 17 16:35:47 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 17 08:24:53 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 17 08:07:12 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 17 08:07:11 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 17 07:16:06 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-user"></i>
+                                </span>
+                                <span>Someone is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 16 23:56:25 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="fas fa-house-damage"></i>
+                                </span>
+                                <span>No one is in home</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 16 23:03:03 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 16 21:34:27 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 16 21:34:27 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Thu Dec 16 18:43:07 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-hand-point-up"></i>
+                                </span>
+                                <span>Forced on</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 10 22:08:08 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Off</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                                
+                                <li>
+                                    <span class="icon has-text-info">
+                                    <i class="far fa-thumbs-up"></i>
+                                </span>
+                                <span>Unforced</span>
+                                </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tile is-parent box">
+                    <div class="tile is-child">
+                        <p>Fri Dec 10 18:58:18 2021</p>
+                    </div>
+                    <div class="tile is-child">
+                        <b>
+                            <span class="icon has-text-dark mr-2">
+                                <i id="a-presence-socket-icon" class="far fa-hand-point-up"></i>
+                            </span>
+                            <label id="a-presence-socket-label">Forced On</label>
+                        </b>
+                    </div>
+                    <div class="tile is-child">
+                        <ul class="events">
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+
+        </div>
+    </div>
+</section>
+</body>
+</html>

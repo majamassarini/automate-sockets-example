@@ -1,0 +1,11 @@
+- !protocol.Trigger
+  name: "no one at home"
+  notify more events:
+    - !home.event.presence.Event.Off
+  when triggered performers: "home alarm trigger armed on"
+
+- !protocol.Trigger
+  name: "someone at home"
+  notify more events:
+    - !home.event.presence.Event.On
+  when triggered performers: "home alarm trigger armed off"

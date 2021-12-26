@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+* AerWebCopy Engine [version 6.3.0]
+* Copyright Aeroson Systems & Co.
+* File mirrored from http://172.31.10.248:8181/
+* At UTC time: 2021-12-26 19:17:08.499961
+
+--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="static/ff229d15__icon_128x128_blu.png">
+    <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/bulma%400.9.1/css/dff7d2a4__bulma.min.css">
+
+    <script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/1/0a8ce0df__jquery.min.js"></script>
+    <script src="../kit.fontawesome.com/f5f88875__dcf90dd78d.js"></script>
+    <script type="text/javascript" src="static/491a79db__homino.js"></script>
+    <title>Latest Events</title>
+</head>
+
+<body>
+<section class="section">
+    <div class="container">
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="static/ff229d15__icon_128x128_blu.png" width="32" height="32">
+        </a>
+
+        <a role="button" id="burger-button" onclick='$("#burger-button").toggleClass("is-active");$("#home-navbar").toggleClass("is-active")' class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="home-navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="home-navbar" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="./348af68d__index.html">
+            <span class="icon has-text-info">
+                <i class="fas fa-home"></i>
+            </span>
+                <span>Home</span>
+            </a>
+            <a class="navbar-item" href="./8d6a44c2__collections.html">
+                <span class="icon has-text-info">
+                <i class="fas fa-list"></i>
+            </span>
+                <span>Collections</span>
+            </a>
+            
+            <!--a class="navbar-item" href="/editor">
+                <span class="icon has-text-info">
+                <i class="fas fa-edit"></i>
+            </span>
+                <span>Configurator</span>
+            </a-->
+            <a class="navbar-item" href="./941321a5__logs.html">
+                <span class="icon has-text-info">
+                <i class="far fa-clipboard"></i>
+            </span>
+                <span>Logs</span>
+            </a>
+            
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                
+                <div class="buttons">
+                    <label class="label is-info mr-3">admin</label>
+                    <form action="./55f9c24e__logout.html" method="post">
+                        <input class="button is-light" type="submit" value="Logout">
+                    </form>
+                </div>
+                
+                <div class="modal" id="modal-login">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Login</p>
+            <button onclick='$("#modal-login").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <form action="./30e1b0e2__login.html" method="post">
+                <label for="username">Username</label>
+                <input class="input is-info" type="text" name="username" id="username" value="">
+                <label for="password">Password</label>
+                <input class="input is-info" type="password" name="password" id="password" value="">
+                <input class="button is-info mt-6" type="submit" value="Login">
+            </form>
+        </section>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+        
+            <div class="tile is-parent box mt-6">
+                <div class="tile is-child is-4">
+                    <b><a href="appliance/80733b37__power%20sensor.html">power sensor</a></b>
+                </div>
+                <div class="tile is-child is-3">
+                    <b>
+                        <label id="power-sensor-label">485.0 W</label>
+                        <span class="icon has-text-dark mr-3">
+                            <i id="power-sensor-icon" class="None"></i>
+                        </span>
+                    </b>
+                    <ul class="content is-small events mt-3">
+                        
+                            
+                        
+                    </ul>
+                </div>
+                <div class="tile is-child is-4">
+                        
+                            
+                        
+                    
+                </div>
+            </div>
+        
+            <div class="tile is-parent box mt-6">
+                <div class="tile is-child is-4">
+                    <b><a href="appliance/6476246d__lux%20sensor.html">lux sensor</a></b>
+                </div>
+                <div class="tile is-child is-3">
+                    <b>
+                        <label id="lux-sensor-label">0.0 lux</label>
+                        <span class="icon has-text-dark mr-3">
+                            <i id="lux-sensor-icon" class="None"></i>
+                        </span>
+                    </b>
+                    <ul class="content is-small events mt-3">
+                        
+                            
+                        
+                    </ul>
+                </div>
+                <div class="tile is-child is-4">
+                        
+                            
+                        
+                    
+                </div>
+            </div>
+        
+            <div class="tile is-parent box mt-6">
+                <div class="tile is-child is-4">
+                    <b><a href="appliance/dfcdd8a4__a%20presence%20Christmas%20socket.html">a presence Christmas socket</a></b>
+                </div>
+                <div class="tile is-child is-3">
+                    <b>
+                        <label id="a-presence-Christmas-socket-label">On</label>
+                        <span class="icon has-text-dark mr-3">
+                            <i id="a-presence-Christmas-socket-icon" class="fas fa-plug"></i>
+                        </span>
+                    </b>
+                    <ul class="content is-small events mt-3">
+                        
+                            
+                                <li>
+                                    <span class="icon has-text-dark">
+                                    <i class="far fa-thumbs-up"></i>
+                                    </span>
+                                    <span>Unforced</span>
+                                </li>
+                            
+                        
+                    </ul>
+                </div>
+                <div class="tile is-child is-4">
+                        
+                            
+                                <span class="icon has-text-info">
+                                        <i class="far fa-thumbs-up"></i>
+                                </span>
+                            
+                        
+                            
+                                <span class="icon has-text-info">
+                                        <i class="fas fa-cloud"></i>
+                                </span>
+                            
+                        
+                            
+                                <span class="icon has-text-info">
+                                        <i class="far fa-calendar-times"></i>
+                                </span>
+                            
+                        
+                            
+                                <span class="icon has-text-info">
+                                        <i class="far fa-calendar-times"></i>
+                                </span>
+                            
+                        
+                            
+                                <span class="icon has-text-info">
+                                        <i class="far fa-calendar-check"></i>
+                                </span>
+                            
+                        
+                            
+                                <span class="icon has-text-info">
+                                        <i class="fas fa-house-user"></i>
+                                </span>
+                            
+                        
+                    
+                </div>
+            </div>
+        
+            <div class="tile is-parent box mt-6">
+                <div class="tile is-child is-4">
+                    <b><a href="appliance/5b4e4146__a%20presence%20socket.html">a presence socket</a></b>
+                </div>
+                <div class="tile is-child is-3">
+                    <b>
+                        <label id="a-presence-socket-label">Off</label>
+                        <span class="icon has-text-dark mr-3">
+                            <i id="a-presence-socket-icon" class="fas fa-power-off"></i>
+                        </span>
+                    </b>
+                    <ul class="content is-small events mt-3">
+                        
+                            
+                                <li>
+                                    <span class="icon has-text-dark">
+                                    <i class="far fa-thumbs-up"></i>
+                                    </span>
+                                    <span>Unforced</span>
+                                </li>
+                            
+                        
+                    </ul>
+                </div>
+                <div class="tile is-child is-4">
+                        
+                            
+                                <span class="icon has-text-info">
+                                        <i class="far fa-thumbs-up"></i>
+                                </span>
+                            
+                        
+                            
+                                <span class="icon has-text-info">
+                                        <i class="fas fa-house-user"></i>
+                                </span>
+                            
+                        
+                    
+                </div>
+            </div>
+        
+            <div class="tile is-parent box mt-6">
+                <div class="tile is-child is-4">
+                    <b><a href="appliance/c6543ad4__home%20alarm%20zone.html">home alarm zone</a></b>
+                </div>
+                <div class="tile is-child is-3">
+                    <b>
+                        <label id="home-alarm-zone-label">Unarmed</label>
+                        <span class="icon has-text-dark mr-3">
+                            <i id="home-alarm-zone-icon" class="far fa-bell"></i>
+                        </span>
+                    </b>
+                    <ul class="content is-small events mt-3">
+                        
+                            
+                                <li>
+                                    <span class="icon has-text-dark">
+                                    <i class="far fa-bell"></i>
+                                    </span>
+                                    <span>Alarm is not armed</span>
+                                </li>
+                            
+                        
+                    </ul>
+                </div>
+                <div class="tile is-child is-4">
+                        
+                            
+                                <span class="icon has-text-info">
+                                        <i class="far fa-eye"></i>
+                                </span>
+                            
+                        
+                            
+                                <span class="icon has-text-info">
+                                        <i class="far fa-bell"></i>
+                                </span>
+                            
+                        
+                    
+                </div>
+            </div>
+        
+    </div>
+</section>
+</body>
+</html>

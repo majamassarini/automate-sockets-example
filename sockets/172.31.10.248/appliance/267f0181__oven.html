@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+* AerWebCopy Engine [version 6.3.0]
+* Copyright Aeroson Systems & Co.
+* File mirrored from http://172.31.10.248:8181/appliance/oven
+* At UTC time: 2021-12-26 19:17:15.781654
+
+--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../static/ff229d15__icon_128x128_blu.png">
+    <link rel="stylesheet" href="../../cdn.jsdelivr.net/npm/bulma%400.9.1/css/dff7d2a4__bulma.min.css">
+    <link rel="stylesheet" href="../static/8539a24b__homino.css">
+
+    <title>oven</title>
+
+    <script type="text/javascript" src="../../ajax.googleapis.com/ajax/libs/jquery/1/0a8ce0df__jquery.min.js"></script>
+    <script src="../../kit.fontawesome.com/f5f88875__dcf90dd78d.js"></script>
+    <script type="text/javascript" src="../static/491a79db__homino.js"></script>
+</head>
+
+<body>
+<section class="section">
+    <div class="container">
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="../static/ff229d15__icon_128x128_blu.png" width="32" height="32">
+        </a>
+
+        <a role="button" id="burger-button" onclick='$("#burger-button").toggleClass("is-active");$("#home-navbar").toggleClass("is-active")' class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="home-navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="home-navbar" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="../348af68d__index.html">
+            <span class="icon has-text-info">
+                <i class="fas fa-home"></i>
+            </span>
+                <span>Home</span>
+            </a>
+            <a class="navbar-item" href="../8d6a44c2__collections.html">
+                <span class="icon has-text-info">
+                <i class="fas fa-list"></i>
+            </span>
+                <span>Collections</span>
+            </a>
+            
+            <!--a class="navbar-item" href="/editor">
+                <span class="icon has-text-info">
+                <i class="fas fa-edit"></i>
+            </span>
+                <span>Configurator</span>
+            </a-->
+            <a class="navbar-item" href="../941321a5__logs.html">
+                <span class="icon has-text-info">
+                <i class="far fa-clipboard"></i>
+            </span>
+                <span>Logs</span>
+            </a>
+            
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                
+                <div class="buttons">
+                    <label class="label is-info mr-3">admin</label>
+                    <form action="../55f9c24e__logout.html" method="post">
+                        <input class="button is-light" type="submit" value="Logout">
+                    </form>
+                </div>
+                
+                <div class="modal" id="modal-login">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Login</p>
+            <button onclick='$("#modal-login").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <form action="../30e1b0e2__login.html" method="post">
+                <label for="username">Username</label>
+                <input class="input is-info" type="text" name="username" id="username" value="">
+                <label for="password">Password</label>
+                <input class="input is-info" type="password" name="password" id="password" value="">
+                <input class="button is-info mt-6" type="submit" value="Login">
+            </form>
+        </section>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+        <nav class="breadcrumb mt-6" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="../8d6a44c2__collections.html">Collections</a></li>
+                <li><a href="../collection/501a6c81__Energy%20guard%20sockets.html">Energy guard sockets</a></li>
+                <li class="is-active"><a>oven</a></li>
+                <li><a href="oven/b8f358e4__graphs.html">graphs</a> <a href="oven/023ad3e4__history.html">history</a> <a href="oven/1a14439e__details.html">details</a></li>
+            </ul>
+        </nav>
+
+        <h1 class="title">oven is <b id="oven">
+            <label class="ml-6" id="oven-label">On</label>
+            <span class="icon has-text-dark ml-2">
+                <i id="oven-icon" class="fas fa-plug"></i>
+            </span>
+        </b>
+        </h1>
+
+        <div class="tile is-ancestor is-vertical mt-6">
+            
+
+                
+                    <form class="tile is-parent box" action="./267f0181__oven.html" method="POST" id="form-oven-3">
+                        <input type="hidden" name="module" value="home.appliance.socket.event.forced.event">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="oven-3-label">Is it forced?</label>
+</div>
+<div class="tile is-child pr-6">
+    <span class="icon has-text-info">
+        <i id="oven-3-icon" class="far fa-thumbs-up"></i>
+    </span>
+
+    <div class="select is-info">
+            <select name="value" id="oven-3" form="form-oven-3" onchange="ajaxPostValue('', 'home.appliance.socket.event.forced.event', 'Event', $('#oven-3 option:selected').val())">
+                
+                    <option value="On">on</option>
+                
+                    <option value="Off">off</option>
+                
+                    <option value="Not" selected>no</option>
+                
+            </select>
+    </div>
+
+</div>
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-oven-3-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-oven-3-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Is it forced?</em></p>
+            <button onclick='$("#modal-oven-3-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Is it forced?</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>oven</b>:
+                        <input name="value" id="oven-3-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/oven/enable',
+                                       'home.appliance.socket.event.forced.event', 'Event',
+                                       $('#oven-3-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/oven/apply_to_others',
+                                    'home.appliance.socket.event.forced.event', 'Event',
+                                    $('#oven-3-enabled').prop('checked'));
+                                    $('#modal-oven-3-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/oven/apply_to_collection',
+                                    'home.appliance.socket.event.forced.event', 'Event',
+                                    $('#oven-3-enabled').prop('checked'));
+                                    $('#modal-oven-3-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Is it forced?: no</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/oven/send_to_others',
+                                    'home.appliance.socket.event.forced.event', 'Event');
+                                    $('#modal-oven-3-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/oven/send_to_collection',
+                                    'home.appliance.socket.event.forced.event', 'Event');
+                                    $('#modal-oven-3-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" action="./267f0181__oven.html" method="POST" id="form-oven-2">
+                        <input type="hidden" name="module" value="home.event.power.consumption.duration">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="oven-2-label">Power consumption</label>
+</div>
+<div class="tile is-child pr-6">
+    <span class="icon has-text-info">
+        <i id="oven-2-icon" class="fas fa-hourglass-start"></i>
+    </span>
+
+    <div class="select is-info">
+            <select name="value" id="oven-2" form="form-oven-2" onchange="ajaxPostValue('', 'home.event.power.consumption.duration', 'Event', $('#oven-2 option:selected').val())">
+                
+                    <option value="Short" selected>since short time</option>
+                
+                    <option value="Long">since long time</option>
+                
+            </select>
+    </div>
+
+</div>
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-oven-2-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-oven-2-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Power consumption</em></p>
+            <button onclick='$("#modal-oven-2-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Power consumption</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>oven</b>:
+                        <input name="value" id="oven-2-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/oven/enable',
+                                       'home.event.power.consumption.duration', 'Event',
+                                       $('#oven-2-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/oven/apply_to_others',
+                                    'home.event.power.consumption.duration', 'Event',
+                                    $('#oven-2-enabled').prop('checked'));
+                                    $('#modal-oven-2-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/oven/apply_to_collection',
+                                    'home.event.power.consumption.duration', 'Event',
+                                    $('#oven-2-enabled').prop('checked'));
+                                    $('#modal-oven-2-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Power consumption: since short time</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/oven/send_to_others',
+                                    'home.event.power.consumption.duration', 'Event');
+                                    $('#modal-oven-2-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/oven/send_to_collection',
+                                    'home.event.power.consumption.duration', 'Event');
+                                    $('#modal-oven-2-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" action="./267f0181__oven.html" method="POST" id="form-oven-1">
+                        <input type="hidden" name="module" value="home.event.power.consumption">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="oven-1-label">Power consumption is</label>
+</div>
+<div class="tile is-child pr-6">
+    <span class="icon has-text-info">
+        <i id="oven-1-icon" class="fas fa-battery-three-quarters"></i>
+    </span>
+
+    <div class="select is-info">
+            <select name="value" id="oven-1" form="form-oven-1" onchange="ajaxPostValue('', 'home.event.power.consumption', 'Event', $('#oven-1 option:selected').val())">
+                
+                    <option value="No">off</option>
+                
+                    <option value="Low" selected>low</option>
+                
+                    <option value="High">high</option>
+                
+            </select>
+    </div>
+
+</div>
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-oven-1-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-oven-1-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Power consumption is</em></p>
+            <button onclick='$("#modal-oven-1-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Power consumption is</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>oven</b>:
+                        <input name="value" id="oven-1-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/oven/enable',
+                                       'home.event.power.consumption', 'Event',
+                                       $('#oven-1-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/oven/apply_to_others',
+                                    'home.event.power.consumption', 'Event',
+                                    $('#oven-1-enabled').prop('checked'));
+                                    $('#modal-oven-1-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/oven/apply_to_collection',
+                                    'home.event.power.consumption', 'Event',
+                                    $('#oven-1-enabled').prop('checked'));
+                                    $('#modal-oven-1-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Power consumption is: low</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/oven/send_to_others',
+                                    'home.event.power.consumption', 'Event');
+                                    $('#modal-oven-1-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/oven/send_to_collection',
+                                    'home.event.power.consumption', 'Event');
+                                    $('#modal-oven-1-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" action="./267f0181__oven.html" method="POST" id="form-oven-0">
+                        <input type="hidden" name="module" value="home.event.enable">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="oven-0-label">Detach logic is</label>
+</div>
+<div class="tile is-child pr-6">
+    <span class="icon has-text-info">
+        <i id="oven-0-icon" class="fas fa-toggle-off"></i>
+    </span>
+
+    <div class="select is-info">
+            <select name="value" id="oven-0" form="form-oven-0" onchange="ajaxPostValue('', 'home.event.enable', 'Event', $('#oven-0 option:selected').val())">
+                
+                    <option value="On">enabled</option>
+                
+                    <option value="Off" selected>disabled</option>
+                
+            </select>
+    </div>
+
+</div>
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-oven-0-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-oven-0-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Detach logic is</em></p>
+            <button onclick='$("#modal-oven-0-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Detach logic is</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>oven</b>:
+                        <input name="value" id="oven-0-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/oven/enable',
+                                       'home.event.enable', 'Event',
+                                       $('#oven-0-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/oven/apply_to_others',
+                                    'home.event.enable', 'Event',
+                                    $('#oven-0-enabled').prop('checked'));
+                                    $('#modal-oven-0-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/oven/apply_to_collection',
+                                    'home.event.enable', 'Event',
+                                    $('#oven-0-enabled').prop('checked'));
+                                    $('#modal-oven-0-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Detach logic is: disabled</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/oven/send_to_others',
+                                    'home.event.enable', 'Event');
+                                    $('#modal-oven-0-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/oven/send_to_collection',
+                                    'home.event.enable', 'Event');
+                                    $('#modal-oven-0-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+        </div>
+
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,4 @@
+- !protocol.Trigger
+  name: "lux sensor scheduler trigger"
+  notify more events: []
+  when triggered performers: "lux sensor trigger"

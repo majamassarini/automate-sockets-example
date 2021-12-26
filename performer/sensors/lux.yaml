@@ -1,0 +1,9 @@
+- !Performer
+  name: "lux sensor trigger"
+  for appliance: "lux sensor"
+  commands: []
+  triggers:
+  - !knx_plugin.trigger.dpt_value_lux.Always {addresses: [0x0A04]}
+  - !knx_plugin.trigger.dpt_value_lux.DeepDark {addresses: [0x0A04]}
+  - !knx_plugin.trigger.dpt_value_lux.Dark {addresses: [0x0A04]}
+  - !knx_plugin.trigger.dpt_value_lux.Bright {addresses: [0x0A04]}

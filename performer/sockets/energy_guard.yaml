@@ -1,0 +1,144 @@
+- !Performer
+  name: "microwave command"
+  for appliance: "microwave"
+  commands:
+    - !knx_plugin.command.dpt_switch.OffOn { addresses: [ 0x0E11, ] } # microwave is on when the switch is off...
+  triggers: [ ]
+- !Performer
+  name: "oven command"
+  for appliance: "oven"
+  commands:
+    - !knx_plugin.command.dpt_switch.OffOn { addresses: [ 0x0E19, ] }
+  triggers: [ ]
+- !Performer
+  name: "dishwasher command"
+  for appliance: "dishwasher"
+  commands:
+    - !knx_plugin.command.dpt_switch.OffOn { addresses: [ 0x0E21, ] }
+  triggers: [ ]
+- !Performer
+  name: "blast chiller command"
+  for appliance: "blast chiller"
+  commands:
+    - !knx_plugin.command.dpt_switch.OffOn { addresses: [ 0x0C04, ] }
+  triggers: [ ]
+- !Performer
+  name: "washing machine command"
+  for appliance: "washing machine"
+  commands:
+    - !knx_plugin.command.dpt_switch.OffOn { addresses: [ 0x0C05, ] }
+  triggers: [ ]
+
+
+- !Performer
+  name: "trigger enable (sent by microwave)"
+  for appliance: "microwave"
+  commands: [ ]
+  triggers:
+    - !knx_plugin.trigger.dpt_switch.On
+      addresses: [ 0x0E11, ]
+      events:
+        - !home.event.enable.Event.On
+- !Performer
+  name: "trigger enable (sent by oven)"
+  for appliance: "oven"
+  commands: [ ]
+  triggers:
+    - !knx_plugin.trigger.dpt_switch.On
+      addresses: [ 0x0E19, ]
+      events:
+        - !home.event.enable.Event.On
+- !Performer
+  name: "trigger enable (sent by dishwasher)"
+  for appliance: "dishwasher"
+  commands: [ ]
+  triggers:
+    - !knx_plugin.trigger.dpt_switch.On
+      addresses: [ 0x0E21, ]
+      events:
+        - !home.event.enable.Event.On
+- !Performer
+  name: "trigger enable (sent by blast chiller)"
+  for appliance: "blast chiller"
+  commands: [ ]
+  triggers:
+    - !knx_plugin.trigger.dpt_switch.On
+      addresses: [ 0x0C04, ]
+      events:
+        - !home.event.enable.Event.On
+- !Performer
+  name: "trigger enable (sent by washing machine)"
+  for appliance: "washing machine"
+  commands: [ ]
+  triggers:
+    - !knx_plugin.trigger.dpt_switch.On
+      addresses: [ 0x0C05, ]
+      events:
+        - !home.event.enable.Event.On
+
+
+- !Performer
+  name: "microwave triggers"
+  for appliance: "microwave"
+  commands: [ ]
+  triggers:
+    - !knx_plugin.trigger.dpt_switch.Off
+      addresses: [ 0x0E11, ]
+      events:
+        - !home.appliance.socket.event.forced.Event.On
+    - !knx_plugin.trigger.dpt_switch.On
+      addresses: [ 0x0E11, ]
+      events:
+        - !home.appliance.socket.event.forced.Event.Off
+- !Performer
+  name: "oven triggers"
+  for appliance: "oven"
+  commands: [ ]
+  triggers:
+    - !knx_plugin.trigger.dpt_switch.Off
+      addresses: [ 0x0E19, ]
+      events:
+        - !home.appliance.socket.event.forced.Event.On
+    - !knx_plugin.trigger.dpt_switch.On
+      addresses: [ 0x0E19, ]
+      events:
+        - !home.appliance.socket.event.forced.Event.Off
+- !Performer
+  name: "dishwasher triggers"
+  for appliance: "dishwasher"
+  commands: [ ]
+  triggers:
+    - !knx_plugin.trigger.dpt_switch.Off
+      addresses: [ 0x0E21, ]
+      events:
+        - !home.appliance.socket.event.forced.Event.On
+    - !knx_plugin.trigger.dpt_switch.On
+      addresses: [ 0x0E21, ]
+      events:
+        - !home.appliance.socket.event.forced.Event.Off
+- !Performer
+  name: "blast chiller triggers"
+  for appliance: "blast chiller"
+  commands: [ ]
+  triggers:
+    - !knx_plugin.trigger.dpt_switch.Off
+      addresses: [ 0x0C04, ]
+      events:
+        - !home.appliance.socket.event.forced.Event.On
+    - !knx_plugin.trigger.dpt_switch.On
+      addresses: [ 0x0C04, ]
+      events:
+        - !home.appliance.socket.event.forced.Event.Off
+- !Performer
+  name: "washing machine triggers"
+  for appliance: "washing machine"
+  commands: [ ]
+  triggers:
+    - !knx_plugin.trigger.dpt_switch.Off
+      addresses: [ 0x0C05, ]
+      events:
+        - !home.appliance.socket.event.forced.Event.On
+    - !knx_plugin.trigger.dpt_switch.On
+      addresses: [ 0x0C05, ]
+      events:
+        - !home.appliance.socket.event.forced.Event.Off

@@ -1,0 +1,6 @@
+- !Performer
+  name: "notify microwave can be detached"
+  for appliance: "microwave"
+  commands:
+    - !home_assistant_plugin.service.notify.command.Detachable {message: "the microwave could be detached", title: "", target: [], data: {}}
+  triggers: []
